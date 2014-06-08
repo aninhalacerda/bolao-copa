@@ -4,7 +4,6 @@ class CreateUsersTable < ActiveRecord::Migration
 			u.string :name
 			u.integer :score
 			u.belongs_to :group
-			u.has_one :tip
 			u.timestamps
 		end
 	end

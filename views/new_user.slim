@@ -1,0 +1,20 @@
+doctype html
+html
+  body
+    h2 Faca seu palpite!
+    form#contact_form action="#" method="post"
+      ul
+        li
+          label for="name"  Nome:
+          input name="name" type="text"
+      ul
+        - @world_cup.each_slice(6) do |games|
+          div.world_cup_group
+            - games.each do |game|
+              li
+                label for="#{game.first_team}#{game.number}" #{game.first_team}
+                input name="#{game.first_team}#{game.number}" type="text"
+                label for="#{game.second_team}#{game.number}" #{game.second_team}
+                input name="#{game.second_team}#{game.number}" type="text"
+        li
+          input type="submit" value="Enviar"

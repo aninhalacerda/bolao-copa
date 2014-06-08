@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: bolao
+  username: bolaocopa_user
+  password: myb0l40p4ss
+  host: localhost
+  port: 5432

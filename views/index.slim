@@ -1,18 +1,20 @@
 doctype html
 html
   body
-    h2 Hello Sinatra Slim!
+    h2 Bolão Copa do Mundo 2014
+    ul
+        - @groups.each do |group|
+          li.group
+            a href="/groups/#{group.id}" #{group.name}   |   Participantes: #{group.users.size}
     form#contact_form action="#" method="post"
-      ul
-      - @groups.each do |group|
-        a href="/groups/#{group.id}" Link to group
-        li.task= group.name
-      ul
-        li
-          label for="name"  Nome:
-          input name="name" type="text"
-        li
-          label for="token"  Token:
-          input name="token" type="text"
-        li
-          input type="submit" value="Enviar"
+      div.inline_form
+        h4 Crie um novo grupo de Bolao:
+        ul
+          li
+            label for="name"  Nome:
+            input name="name" type="text"
+          li
+            label for="token"  Token:
+            input name="token" type="text"
+          li
+            input.button type="submit" value="Criar"

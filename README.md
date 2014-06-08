@@ -1,9 +1,9 @@
 
-### Bolao Copa 2014
+# Bolao Copa 2014
 =============
 
-# Starting the server
+## Starting the server
 - bundle exec ruby app.rb
 
-# Running tests
+## Running tests
 - bundle exec rake test

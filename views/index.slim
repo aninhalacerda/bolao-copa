@@ -5,7 +5,9 @@ html
     ul
         - @groups.each do |group|
           li.group
-            a href="/groups/#{group.id}" #{group.name}   |   Participantes: #{group.users.size}
+            a href="/groups/#{group.id}" #{group.name} | Participantes: #{group.users.size}
+            - if group.users.size != 0
+              h4 Melhor palpiteiro(a): #{group.users.first.name}  
     form#contact_form action="#" method="post"
       div.inline_form
         h4 Crie um novo grupo de Bolao:

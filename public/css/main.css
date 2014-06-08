@@ -58,6 +58,16 @@ ul {
 
 .group a {font-size: 22px}
 
+.ranking {
+  width: 50%;
+  display: inline-block;
+}
+
+.ranking h4 {
+  display: inline-block;
+  margin: 0;
+}
+
 .inline_form {
   margin: 15px 0;
   padding: 10px 0;

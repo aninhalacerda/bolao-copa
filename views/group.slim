@@ -1,0 +1,10 @@
+doctype html
+html
+  body
+    h2 #{@group.name}
+    ul.ranking
+        - @group.users.each do |user|
+          li
+            h4 #{user.name}
+            h4 #{user.score}
+    a href="#{@group.id}/new_user" Palpitar
